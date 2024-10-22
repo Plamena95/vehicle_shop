@@ -1,10 +1,30 @@
 import './bootstrap.js';
-/*
- * Welcome to your app's main JavaScript file!
- *
- * This file will be included onto the page via the importmap() Twig function,
- * which should already be in your base.html.twig.
- */
 import './styles/app.css';
+import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { Component } from 'react';
+import Menu from './controllers/blocks/navbar.js';
+import Footer from './controllers/blocks/footer.js'; 
+import Home from './controllers/pages/home';
+import Profile from './controllers/pages/profile';
+import Vehicle from './controllers/pages/vehicle';
+import { userState } from './controllers/blocks/userprofile';
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+class App extends Component {
+    render() {
+      return (
+        <Router>
+          <Menu />
+            <div style={{ minHeight: '1500px' }}>
+                <Routes>
+                        <Route path="/profile" element={<Profile user={userState.user} />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/:type/:id" element={<Vehicle />} />
+                </Routes>
+            </div>
+          <Footer />
+        </Router>
+      );
+    }
+  }
+  export default ReactDOM.render(<App />, document.getElementById('body'));
