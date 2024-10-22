@@ -13,7 +13,7 @@ class UserState {
     vehicleType = {
         Car: ['Engine Capacity', 'Doors', 'Category', 'Color'],
         Motorcycle: ['Engine Capacity','Color'],
-        Truck: ['Load Capacity', 'Axles'],
+        Truck: ['Engine Capacity', 'Beds', 'Color'],
         Trailer: ['Load Capacity', 'Axles'],
     };
 

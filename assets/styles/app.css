@@ -443,3 +443,9 @@ a {
 #auth-tabs{
   flex-direction: row;
 }
+
+.home-slider{
+  position: absolute;
+  right: 27%;
+  top: 88px;
+}

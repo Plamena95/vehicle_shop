@@ -15,7 +15,7 @@ const VehicleModal = ({ isOpen, onRequestClose, vehicleTypes }) => {
     const vehicleAttributes = {
         car: [['engine_capacity', 'text'], ['colour', 'text'], ['doors', 'number'], ['category', vehicleTypes]],
         motorcycle: [['engine_capacity', 'number'], ['colour', 'text']],
-        truck: [['load_capacity', 'number'], ['axles', 'number']],
+        truck: [['engine_capacity', 'number'], ['beds', 'number'], ['color', 'text']],
         trailer: [['load_capacity', 'number'], ['axles', 'number']],
     };
 

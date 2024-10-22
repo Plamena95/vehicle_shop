@@ -21,10 +21,13 @@ class Truck
     private ?string $model = null;
 
     #[ORM\Column]
-    private ?int $load_capacity = null;
+    private ?int $engine_capacity = null;
 
     #[ORM\Column]
-    private ?int $axles = null;
+    private ?string $color = null;
+
+    #[ORM\Column]
+    private ?int $beds = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 0)]
     private ?string $price = null;
@@ -68,26 +71,38 @@ class Truck
         return $this;
     }
 
-    public function getLoadCapacity(): ?int
+    public function getEngineCapacity(): ?int
     {
-        return $this->load_capacity;
+        return $this->engine_capacity;
     }
 
-    public function setLoadCapacity(int $load_capacity): static
+    public function setEngineCapacity(int $engine_capacity): static
     {
-        $this->load_capacity = $load_capacity;
+        $this->engine_capacity = $engine_capacity;
 
         return $this;
     }
 
-    public function getAxles(): ?int
+    public function getBeds(): ?int
     {
-        return $this->axles;
+        return $this->beds;
     }
 
-    public function setAxles(int $axles): static
+    public function setBeds(int $beds): static
     {
-        $this->axles = $axles;
+        $this->beds = $beds;
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): static
+    {
+        $this->color = $color;
 
         return $this;
     }

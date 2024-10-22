@@ -45,15 +45,15 @@ const Home = () => {
                         <img className="dots-light" src="../images/dots-light.png?" />
                         <Carousel>
                                 <Carousel.Item>
-                                <img src="../images/car.png?v=1" alt="First slide" />
+                                <img className="home-slider" src="../images/car.png?v=1" alt="First slide" />
                                 </Carousel.Item>
 
                                 <Carousel.Item>
-                                <img src="../images/truck.png?v=2.1" alt="Second slide" />
+                                <img className="home-slider" src="../images/truck.png?v=2.1" alt="Second slide" />
                                 </Carousel.Item>
                                 
                                 <Carousel.Item>
-                                <img src="../images/motorcycle.png?v=1" alt="Third slide" />
+                                <img className="home-slider" src="../images/motorcycle.png?v=1" alt="Third slide" />
                                 </Carousel.Item>
                         </Carousel>
                     </div>

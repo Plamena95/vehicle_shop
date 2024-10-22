@@ -104,8 +104,9 @@ class VehicleController extends AbstractController
                 ];
             } elseif ($name == 'Truck') {
                 $specificFields = [
-                    'Load Capacity' => $vehicle->getLoadCapacity(),
-                    'Axles' => $vehicle->getAxles(),
+                    'Engine Capacity' => $vehicle->getEngineCapacity(),
+                    'Beds' => $vehicle->getBeds(),
+                    'Color' => ucwords($vehicle->getColor()),
                 ];
             } elseif ($name == 'Trailer') {
                 $specificFields = [
@@ -157,7 +158,9 @@ class VehicleController extends AbstractController
                     ];
                 } elseif ($key == 'truck') {
                     $specificFields = [
-                        'Load Capacity' => $vehicle->getLoadCapacity(),
+                        'Engine Capacity' => $vehicle->getEngineCapacity(),
+                        'Beds' => $vehicle->getBeds(),
+                        'Color' => ucwords($vehicle->getColor()),
                     ];
                 } elseif ($key == 'trail') {
                     $specificFields = [
@@ -226,8 +229,9 @@ class VehicleController extends AbstractController
             ];
         } elseif ($type == 'truck') {
             $specificFields = [
-                'Load Capacity' => $vehicle->getLoadCapacity(),
-                'Axles' => $vehicle->getAxles(),
+                'Engine Capacity' => $vehicle->getEngineCapacity(),
+                'Beds' => $vehicle->getBeds(),
+                'Color' => ucwords($vehicle->getColor()),
             ];
         } elseif ($type == 'trail') {
             $specificFields = [
@@ -267,8 +271,9 @@ class VehicleController extends AbstractController
                 ];
             } elseif ($type == 'truck') {
                 $more_data = [
-                    'Load Capacity' => $vehicle->getLoadCapacity(),
-                    'Axles' => $vehicle->getAxles(),
+                    'Engine Capacity' => $vehicle->getEngineCapacity(),
+                    'Beds' => $vehicle->getBeds(),
+                    'Color' => ucwords($vehicle->getColor()),
                 ];
             } elseif ($type == 'trail') {
                 $more_data = [
